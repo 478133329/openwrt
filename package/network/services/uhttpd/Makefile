@@ -101,6 +101,7 @@ ifneq ($(CONFIG_USE_GLIBC),)
   TARGET_CFLAGS += -D_DEFAULT_SOURCE
 endif
 
+TARGET_CFLAGS += -Wno-implicit-function-declaration
 TARGET_LDFLAGS += -lcrypt
 
 CMAKE_OPTIONS += -DTLS_SUPPORT=on

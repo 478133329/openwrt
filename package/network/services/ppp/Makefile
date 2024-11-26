@@ -299,6 +299,11 @@ define Package/pppoe-discovery/install
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/sbin/pppoe-discovery $(1)/usr/sbin/
 endef
 
+define Package/ppp/extra_provides
+        echo "libcrypto.so.1.1";
+endef
+
+
 $(eval $(call BuildPackage,ppp))
 $(eval $(call BuildPackage,ppp-multilink))
 $(eval $(call BuildPackage,ppp-mod-pppoa))

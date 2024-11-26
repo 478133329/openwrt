@@ -276,7 +276,7 @@ define Package/mt76-test
   DEPENDS:=kmod-mt76-core +libnl-tiny
 endef
 
-TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include/libnl-tiny
+TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include/libnl-tiny -Wno-unused-result
 
 NOSTDINC_FLAGS := \
 	$(KERNEL_NOSTDINC_FLAGS) \

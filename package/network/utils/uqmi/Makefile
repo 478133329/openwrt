@@ -32,7 +32,7 @@ define Package/uqmi/description
 endef
 
 TARGET_CFLAGS += \
-	-I$(STAGING_DIR)/usr/include -ffunction-sections -fdata-sections
+	-I$(STAGING_DIR)/usr/include -ffunction-sections -fdata-sections -Wno-maybe-uninitialized
 
 TARGET_LDFLAGS += -Wl,--gc-sections
 

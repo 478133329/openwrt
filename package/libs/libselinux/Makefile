@@ -102,6 +102,8 @@ endef
 
 $(foreach a,$(LIBSELINUX_UTILS),$(eval $(call GenUtilPkg,libselinux-$(a),$(a))))
 
+TARGET_CFLAGS += -lpcre
+
 # Needed to link libselinux utilities, which link against
 # libselinux.so, which indirectly depends on libpcre.so, installed in
 # $(STAGING_DIR_HOSTPKG).
