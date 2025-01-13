@@ -233,4 +233,8 @@ ifneq ($(DUMP),1)
   -include $(PLATFORM_SUBDIR)/base-files.mk
 endif
 
+define Package/base-files/extra_provides
+        echo -e "libz.so.1\nlibncurses.so.5\nlibstdc++.so.6";
+endef
+
 $(eval $(call BuildPackage,base-files))
